@@ -4,4 +4,5 @@ Implementación de una topología dinámica y un *Firewall* a nivel de capa de e
 
 ### Requerimientos
 
-
+- Python (https://www.python.org/downloads/)
+- Mininet (https://mininet.org/)
