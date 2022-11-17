@@ -28,7 +28,7 @@ $ sudo mn --custom topo.py --topo chaintopo,5 --test pingall
 #### Controlador
 
 A continuación, se explica cómo ejecutar controladores desarrollados con POX, una plataforma para desarrollar controladores SDN.
-Mininet se conecta al controlador mediante una dirección y puerto específica, por lo que debemos correr el controlador escuchando en dicho socket. Para ello antes de realizar la ejecución debemos realizar los siguientes pasos:
+Mininet se conecta al controlador mediante una dirección y puerto específicos (el puerto estándar de OpenFlow es el 6633), por lo que debemos correr el controlador escuchando en dicho socket. Para ello antes de realizar la ejecución debemos realizar los siguientes pasos:
 
 En una terminal con Mininet, crear un symlink en el directorio de pox `/pox/pox/samples`.
 
