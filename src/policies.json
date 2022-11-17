@@ -1,0 +1,16 @@
+{
+    "rules": [
+        {
+            "dst_port": 80
+        },
+        {
+            "protocol": "UDP",
+            "src_host": "H1",
+            "dst_port": 5001
+        },
+        {
+            "src_host": "H2",
+            "dst_host": "H4"
+        }
+    ]
+}
