@@ -2,6 +2,7 @@ from pox.core import core
 from pox.lib.revent import EventMixin
 import pox.forwarding.l2_learning as l2_learning
 import pox.lib.packet as pkt
+import pox.openflow.libopenflow_01 as of
 
 log = core.getLogger()
 
@@ -53,7 +54,7 @@ class Firewall(EventMixin):
         # When a connection to a switch starts, a ConnectionUp event is fired.
         discardDestinationPort80(event)
 
-    def launch():
-        # Starting the Firewall module.
-        l2_learning.launch()
-        core.registerNew(Firewall)
+def launch():
+    # Starting the Firewall module.
+    l2_learning.launch()
+    core.registerNew(Firewall)
