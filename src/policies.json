@@ -5,12 +5,12 @@
         },
         {
             "protocol": "UDP",
-            "src_host": "H1",
+            "src_host": "10.0.0.1",
             "dst_port": 5001
         },
         {
-            "src_host": "H2",
-            "dst_host": "H4"
+            "src_host": "10.0.0.2",
+            "dst_host": "10.0.0.4"
         }
     ]
 }
