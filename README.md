@@ -40,7 +40,7 @@ $ ln -s ../../../tp2-intro/src/firewall.py firewall.py
 Teniendo el symlink, todas las siguientes veces para levantar el controlador bastará con ejecutar de la siguiente manera, con la opción de elegir el modo *verboso*:
 
 ```console
-$ cd ~/pox/pox/
+$ cd ~/pox/
 $ ./pox.py --verbose samples.firewall forwarding.l2_learning
 ```
 
