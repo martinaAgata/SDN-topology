@@ -26,13 +26,17 @@ class Firewall(EventMixin):
 
     def __init__(self):
         self.listenTo(core.openflow)
+        self.policies = get_policies()
         log.debug("Enabling Firewall Module")
 
     def _handle_ConnectionUp(self, event):
         # When a connection to a switch starts, a ConnectionUp event is fired.
         log.debug("Switch %s has come up.", dpid_to_str(event.dpid))
-        policies = get_policies()
-        for rule in policies.rules:
+
+        if self.policies.switch and self.policies.switch != dpid_to_str(event.dpid):
+            return
+        
+        for rule in self.policies.rules:
             self.set_policy(event, rule)
 
     def set_policy(self, event, rule):

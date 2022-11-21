@@ -22,7 +22,8 @@ class Rule(object):
         )
 
 class Policies(object):
-    def __init__(self, rules):
+    def __init__(self, switch=None, rules=[]):
+        self.switch = switch
         self.rules = self._create_rules(rules)
 
     def _create_rules(self, rules):
@@ -48,12 +49,4 @@ def get_policies():
         print(policies)
     
     return policies
-
-if __name__ == '__main__':
-    with open('./policies.json', 'r') as outfile:
-        j = json.load(outfile)
-        policies = Policies(**j)
-        print(policies)
-
-
 
