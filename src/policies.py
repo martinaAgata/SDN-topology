@@ -37,7 +37,8 @@ class Policies(object):
         return str(self)
 
     def __str__(self):
-        return "Policies {{ rules={} }}".format(
+        return "Policies {{ switch={}, rules={} }}".format(
+            self.switch,
             ["{}".format(str(x)) for x in self.rules],
         )
 
@@ -49,4 +50,3 @@ def get_policies():
         print(policies)
     
     return policies
-
